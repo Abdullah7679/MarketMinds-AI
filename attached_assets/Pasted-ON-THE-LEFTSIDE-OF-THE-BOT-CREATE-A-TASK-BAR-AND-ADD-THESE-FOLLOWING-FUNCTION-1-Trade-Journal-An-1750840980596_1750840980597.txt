@@ -1,0 +1,50 @@
+ON THE LEFTSIDE OF THE BOT CREATE A TASK BAR AND ADD THESE FOLLOWING FUNCTION  1. Trade Journal & Analytics
+Function:
+Allow users to log their trades, track performance, and receive analytics on win rate, average risk/reward, drawdown, and more.
+Benefit:
+Helps traders learn from past trades and improve over time.
+2. Economic Calendar Integration
+Function:
+Show upcoming economic events (like FOMC, NFP, CPI releases) and explain their potential market impact.
+Benefit:
+Keeps traders aware of high-impact news that could affect their trades.
+3. Alert & Notification System
+Function:
+Let users set custom alerts for price levels, news, or trading signals, and receive notifications via the extension or email.
+Benefit:
+Ensures traders never miss important market moves or signals.
+4. Sentiment Analysis
+Function:
+Analyze market sentiment from news, social media, or order flow, and present a summary (e.g., bullish/bearish/neutral).
+Benefit:
+Adds another layer of context to technical and fundamental analysis.
+5. Strategy Backtesting
+Function:
+Allow users to test their strategies or signals on historical data directly from the assistant.
+Benefit:
+Helps validate ideas before risking real capital.
+6. Learning & Education Hub
+Function:
+Provide access to trading tutorials, glossaries, and explainers for concepts like SMC, ICT, risk management, etc.
+Benefit:
+Supports continuous learning for users at all levels.
+7. Multi-Asset Support
+Function:
+Support not just forex, but also stocks, crypto, commodities, and indices.
+Benefit:
+Makes the assistant useful for a wider range of traders.
+8. Customizable AI Personality/Prompt
+Function:
+Let users adjust the assistant’s tone, depth of explanation, or even upload their own trading rules for personalized advice.
+Benefit:
+Makes the assistant more adaptable to different user preferences.
+9. Regulatory & Compliance Warnings
+Function:
+Remind users about trading risks, regional regulations, and the importance of responsible trading.
+Benefit:
+Promotes safe and legal trading practices.
+10. Integration with Trading Platforms/Brokers
+Function:
+(Advanced) Allow users to connect their broker accounts for trade execution, portfolio tracking, or automated journaling.
+Benefit:
+Streamlines the trading workflow.

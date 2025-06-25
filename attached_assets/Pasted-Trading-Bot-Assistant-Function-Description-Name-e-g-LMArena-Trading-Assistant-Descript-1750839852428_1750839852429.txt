@@ -1,0 +1,49 @@
+Trading Bot/Assistant: Function & Description
+Name: (e.g., “LMArena Trading Assistant”)
+
+Description:
+
+A browser-based, AI-powered trading assistant that empowers traders with real-time, expert-level insights, signals, and analysis—right from their trading platforms or charting websites. The assistant appears as a floating chat widget (via browser extension) and delivers actionable, professional trading support.
+
+Key Functions:
+Advanced AI Chat:
+Uses state-of-the-art language models (Gemini, GPT-4, etc.) to answer trading questions, explain concepts, and provide actionable advice in natural language.
+
+Multi-Framework Expertise:
+Deep knowledge of ICT (Inner Circle Trader), SMC (Smart Money Concepts), price action, DMC, MMC-Candle King, institutional SMC interpretation, and both fundamental and technical analysis.
+
+Real-Time Market Data:
+Integrates with APIs to fetch live prices, historical data, and perform multi-timeframe (MTF), high-timeframe (HTF), and low-timeframe (LTF) analysis.
+
+News Awareness:
+Fetches and summarizes the latest financial news, explaining its potential impact on markets and specific assets.
+
+Session Awareness:
+Recognizes and adapts to different trading sessions (e.g., London, New York, Asian) for context-aware analysis.
+
+User-Friendly Interface:
+Accessible as a floating button/assistant on any website via browser extension, with a modern chat UI.
+
+Custom Signal Generation:
+Provides entry/exit signals, trade ideas, and risk management tips based on user queries and real-time data.
+
+Historical & Predefined Data Knowledge:
+Can reference historical price action and predefined trading setups for deeper analysis.
+
+Risk Management Guidance:
+Offers personalized risk management advice, including position sizing, stop-loss placement, risk/reward ratio calculation, and maximum drawdown recommendations.
+
+Money Management Support:
+Advises on capital allocation, portfolio diversification, compounding strategies, and maintaining trading discipline to protect and grow trading capital.
+
+Example Use Cases:
+“What’s the current SMC setup on EURUSD, and what’s your bias?”
+“Give me an MTF analysis for BTCUSD.”
+“How does today’s news affect gold?”
+“Show me the last three institutional moves on NASDAQ.”
+“What’s the recommended position size for a $5,000 account risking 1% per trade?”
+“How should I set my stop-loss and take-profit for this trade?”
+“Suggest a money management plan for swing trading.”
+In summary:
+Your assistant is a highly qualified, AI-powered trading expert that combines advanced market knowledge, real-time data, risk and money management, and user-friendly chat—all accessible from any browser tab.
+
