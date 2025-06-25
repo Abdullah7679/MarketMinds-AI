@@ -1,0 +1,710 @@
+/* MarketMinds AI - Enhanced CSS with Extension Integration */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme colors */
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Galaxy theme colors for extension */
+  --primary-neon: hsl(310, 100%, 53%); /* #FF10F0 */
+  --secondary-neon: hsl(195, 100%, 50%); /* #00D4FF */
+  --tertiary-neon: hsl(271, 76%, 53%); /* #8A2BE2 */
+  --quaternary-neon: hsl(220, 100%, 50%); /* #0066FF */
+  --background-dark: hsl(0, 0%, 0%); /* #000000 */
+  --background-space: hsl(0, 0%, 4%); /* #0a0a0a */
+  --glass-bg: hsla(0, 0%, 100%, 0.05);
+  --glass-border: hsla(0, 0%, 100%, 0.1);
+  
+  /* Sidebar colors */
+  --sidebar-background: hsl(0, 0%, 100%);
+  --sidebar-foreground: hsl(20, 14.3%, 4.1%);
+  --sidebar-primary: hsl(207, 90%, 54%);
+  --sidebar-primary-foreground: hsl(211, 100%, 99%);
+  --sidebar-accent: hsl(60, 4.8%, 95.9%);
+  --sidebar-accent-foreground: hsl(24, 9.8%, 10%);
+  --sidebar-border: hsl(20, 5.9%, 90%);
+  --sidebar-ring: hsl(20, 14.3%, 4.1%);
+}
+
+.dark {
+  /* Dark theme colors */
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+  
+  /* Dark sidebar colors */
+  --sidebar-background: hsl(240, 10%, 3.9%);
+  --sidebar-foreground: hsl(0, 0%, 98%);
+  --sidebar-primary: hsl(207, 90%, 54%);
+  --sidebar-primary-foreground: hsl(211, 100%, 99%);
+  --sidebar-accent: hsl(240, 3.7%, 15.9%);
+  --sidebar-accent-foreground: hsl(0, 0%, 98%);
+  --sidebar-border: hsl(240, 3.7%, 15.9%);
+  --sidebar-ring: hsl(240, 4.9%, 83.9%);
+}
+
+/* Galaxy theme override for extension widget */
+.galaxy-theme {
+  --background: var(--background-dark);
+  --foreground: hsl(0, 0%, 100%);
+  --primary: var(--primary-neon);
+  --secondary: var(--secondary-neon);
+  --accent: var(--tertiary-neon);
+  --border: var(--glass-border);
+  --input: var(--glass-bg);
+  --card: var(--glass-bg);
+  --popover: var(--background-space);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  
+  /* Extension-specific base styles */
+  .marketminds-extension-root {
+    font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ffffff;
+    --primary-neon: #FF10F0;
+    --secondary-neon: #00D4FF;
+    --tertiary-neon: #8A2BE2;
+    --quaternary-neon: #0066FF;
+    --background-dark: #000000;
+    --background-space: #0a0a0a;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+  }
+  
+  .marketminds-extension-root * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  /* Extension Widget Styles */
+  .marketminds-floating-button {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-neon) 0%, var(--secondary-neon) 50%, var(--tertiary-neon) 100%);
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px rgba(255, 16, 240, 0.6), 0 0 60px rgba(0, 212, 255, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    pointer-events: all;
+    z-index: 2147483647;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: pulse-glow 2s infinite;
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 30px rgba(255, 16, 240, 0.6), 0 0 60px rgba(0, 212, 255, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(255, 16, 240, 0.8), 0 0 80px rgba(0, 212, 255, 0.6);
+    }
+  }
+  
+  .marketminds-floating-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(255, 16, 240, 0.8), 0 0 80px rgba(0, 212, 255, 0.6) !important;
+  }
+  
+  .marketminds-floating-button.dragging {
+    transform: scale(1.05);
+    cursor: grabbing !important;
+  }
+  
+  .marketminds-chat-widget {
+    background: linear-gradient(135deg, #000000 0%, #1a0033 25%, #000d1a 50%, #001a33 75%, #000000 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 
+      0 0 50px rgba(255, 16, 240, 0.3),
+      0 0 100px rgba(0, 212, 255, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    animation: fadeInScale 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  .widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: linear-gradient(90deg, var(--primary-neon) 0%, var(--secondary-neon) 100%);
+    background-size: 200% 100%;
+    animation: gradientShift 3s ease-in-out infinite;
+  }
+  
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  .neon-text {
+    background: linear-gradient(45deg, var(--primary-neon), var(--secondary-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 20px rgba(255, 16, 240, 0.5);
+    font-weight: 700;
+  }
+  
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(255, 16, 240, 0.3);
+  }
+  
+  .neon-border {
+    border: 1px solid var(--primary-neon);
+    box-shadow: 0 0 15px rgba(255, 16, 240, 0.3);
+  }
+  
+  .glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+  }
+  
+  /* Chat Message Styles */
+  .chat-message {
+    margin-bottom: 16px;
+    animation: messageSlideIn 0.3s ease-out;
+  }
+  
+  @keyframes messageSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .user-message .message-content {
+    background: linear-gradient(135deg, var(--quaternary-neon), var(--secondary-neon));
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.3);
+  }
+  
+  .ai-message .message-content {
+    background: linear-gradient(135deg, var(--primary-neon), var(--tertiary-neon));
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 16, 240, 0.3);
+  }
+  
+  /* Typing Indicator */
+  .typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 8px 0;
+  }
+  
+  .typing-indicator span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary-neon), var(--secondary-neon));
+    animation: typingPulse 1.4s infinite;
+  }
+  
+  .typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes typingPulse {
+    0%, 60%, 100% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    30% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+  
+  /* Sidebar Styles */
+  .sidebar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(26, 0, 51, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    border-right: 1px solid var(--glass-border);
+    z-index: 10;
+    animation: slideInLeft 0.3s ease-out;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    margin: 4px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .sidebar-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(4px);
+  }
+  
+  /* Voice Recorder Styles */
+  .voice-recorder-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    animation: fadeIn 0.2s ease-out;
+  }
+  
+  .waveform {
+    display: flex;
+    align-items: end;
+    gap: 2px;
+    height: 40px;
+  }
+  
+  .wave-bar {
+    width: 3px;
+    border-radius: 1.5px;
+    animation: waveAnimation 1s infinite ease-in-out;
+    min-height: 4px;
+  }
+  
+  @keyframes waveAnimation {
+    0%, 100% {
+      transform: scaleY(0.5);
+    }
+    50% {
+      transform: scaleY(1);
+    }
+  }
+  
+  /* File Upload Styles */
+  .file-upload-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    animation: fadeIn 0.2s ease-out;
+  }
+  
+  .upload-area {
+    border: 2px dashed var(--glass-border);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 16px;
+  }
+  
+  .upload-area:hover {
+    border-color: var(--secondary-neon);
+    background: rgba(0, 212, 255, 0.05);
+  }
+  
+  .upload-area.drag-over {
+    border-color: var(--primary-neon);
+    background: rgba(255, 16, 240, 0.1);
+    transform: scale(1.02);
+  }
+  
+  .upload-area.has-file {
+    border-color: var(--secondary-neon);
+    background: rgba(0, 212, 255, 0.05);
+  }
+  
+  /* Button Styles */
+  .neon-button {
+    background: linear-gradient(45deg, var(--primary-neon), var(--secondary-neon));
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+  }
+  
+  .neon-button:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 16, 240, 0.4);
+  }
+  
+  .neon-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .control-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 8px;
+    color: var(--secondary-neon);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .control-button:hover {
+    background: rgba(0, 212, 255, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+  }
+  
+  .control-button.recording {
+    background: rgba(255, 16, 240, 0.2);
+    color: var(--primary-neon);
+    animation: recordingPulse 1s infinite;
+  }
+  
+  @keyframes recordingPulse {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(255, 16, 240, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(255, 16, 240, 0.6);
+    }
+  }
+  
+  /* Input Styles */
+  .neon-input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    color: #ffffff;
+    outline: none;
+    transition: all 0.2s ease;
+  }
+  
+  .neon-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .neon-input:focus {
+    border-color: var(--secondary-neon);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  }
+  
+  /* Scrollbar Styles */
+  .neon-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .neon-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+  }
+  
+  .neon-scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, var(--primary-neon), var(--secondary-neon));
+    border-radius: 3px;
+  }
+  
+  /* Utility Classes */
+  .fade-in {
+    animation: fadeIn 0.2s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .marketminds-chat-widget {
+      width: 320px !important;
+      height: 480px !important;
+    }
+    
+    .sidebar-overlay {
+      width: 250px;
+    }
+    
+    .chat-area.with-sidebar {
+      margin-left: 250px;
+    }
+    
+    .marketminds-floating-button {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .marketminds-chat-widget {
+      width: 300px !important;
+      height: 450px !important;
+    }
+    
+    .sidebar-overlay {
+      width: 220px;
+    }
+    
+    .chat-area.with-sidebar {
+      margin-left: 220px;
+    }
+  }
+}
+
+@layer utilities {
+  /* Extension-specific utilities */
+  .extension-isolate {
+    all: initial;
+    font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  .pointer-events-none {
+    pointer-events: none;
+  }
+  
+  .pointer-events-all {
+    pointer-events: all;
+  }
+  
+  .z-extension {
+    z-index: 2147483647;
+  }
+  
+  .z-extension-overlay {
+    z-index: 2147483646;
+  }
+  
+  .z-extension-modal {
+    z-index: 2147483645;
+  }
+  
+  /* Galaxy background utilities */
+  .galaxy-bg {
+    background: linear-gradient(135deg, #000000 0%, #1a0033 25%, #000d1a 50%, #001a33 75%, #000000 100%);
+  }
+  
+  .space-bg {
+    background: radial-gradient(ellipse at center, #1a0033 0%, #000000 70%);
+  }
+  
+  .nebula-bg {
+    background: radial-gradient(ellipse at top, #8A2BE2 0%, #000000 50%),
+                radial-gradient(ellipse at bottom, #FF10F0 0%, transparent 50%);
+  }
+  
+  /* Neon glow utilities */
+  .glow-pink {
+    box-shadow: 0 0 20px rgba(255, 16, 240, 0.5);
+  }
+  
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  }
+  
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+  }
+  
+  /* Text glow utilities */
+  .text-glow-pink {
+    text-shadow: 0 0 10px rgba(255, 16, 240, 0.7);
+  }
+  
+  .text-glow-blue {
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
+  }
+  
+  .text-glow-purple {
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
+  }
+  
+  /* Glassmorphism utilities */
+  .glass-light {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .glass-neon {
+    background: rgba(255, 16, 240, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 16, 240, 0.3);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .marketminds-extension-root {
+    --primary-neon: #FF00FF;
+    --secondary-neon: #00FFFF;
+    --glass-border: rgba(255, 255, 255, 0.3);
+  }
+  
+  .marketminds-floating-button {
+    border: 3px solid #ffffff;
+  }
+  
+  .neon-text {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .marketminds-floating-button {
+    animation: none;
+  }
+  
+  .typing-indicator span {
+    animation: none;
+  }
+  
+  .wave-bar {
+    animation: none;
+  }
+  
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for accessibility */
+.marketminds-extension-root button:focus-visible,
+.marketminds-extension-root input:focus-visible,
+.marketminds-extension-root [tabindex]:focus-visible {
+  outline: 2px solid var(--secondary-neon);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.3);
+}
+
+/* Print styles */
+@media print {
+  .marketminds-extension-root {
+    display: none !important;
+  }
+}
+
+/* Dark mode specific overrides */
+@media (prefers-color-scheme: dark) {
+  .marketminds-extension-root {
+    color-scheme: dark;
+  }
+}
